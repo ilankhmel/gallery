@@ -28,13 +28,14 @@ section {
     padding: 100px 0;
 }
 section h2.section-heading {
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 0;
     margin-bottom: 15px;
 }
 section h3.section-subheading {
-    font-size: 16px;
+    font-size: 23px;
     font-weight: 400;
+    color: black !important;
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
@@ -45,12 +46,34 @@ section h3.section-subheading {
         padding: 150px 0;
     }
 }
+.text-muted {
+    color: rgb(189, 57, 0)!important;
+    font-size: 1.3vw;
+    font-weight: bold;
+    font-family: cursive;
+}
+.text-muted h3{
+    color: black!important;
+    font-size: 2vw;
+    font-family: cursive;
+}
+.fa-inverse{
+    background-color: #ff8743;
+    border-radius: 50%;
+    
+}
+.fa-shopping-cart:before {
+    content: "\f13b";
+}
+.fa-lock:before {
+    content: "\f13c";
+}
 ::-moz-selection {
     background: #fed136;
     text-shadow: none;
 }
 ::selection {
-    background: #fed136;
+    background: #ff8743 !important;
     text-shadow: none;
 }
 img::selection {
@@ -69,7 +92,7 @@ body {
     right: 3%;
     height: 50px;
     width: 50px;
-    background: #e2cb36;
+    background: #ff8743;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -119,7 +142,7 @@ body {
 }
 
 #mainNav {
-    background-color: #222222;
+    background-color: #057FB0;
     z-index: 5;
 }
 #mainNav .navbar-toggler {
@@ -129,12 +152,12 @@ body {
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: black;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: black;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 #mainNav .navbar-brand.active,
@@ -148,7 +171,7 @@ body {
     font-weight: 400;
     padding: 0.75em 0;
     letter-spacing: 1px;
-    color: white;
+    color: rgb(181, 205, 230);
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
@@ -179,7 +202,7 @@ body {
     #mainNav.navbar-shrink {
         padding-top: 0;
         padding-bottom: 0;
-        background-color: #222222;
+        background-color: #057FB0;
     }
     #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
@@ -190,7 +213,7 @@ body {
 header.masthead {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.7)  url("../img/code.jpg");
+    background: rgba(0, 0, 0, 0.3)  url("../img/bg2.jpg");
     /* background-image: url("../img/code.jpg"); */
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -201,6 +224,27 @@ header.masthead {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.skills{
+    /* background: white  url("../img/bg3.jpg");
+    background-blend-mode: white;
+    opacity: 50%; */
+    background: 
+     linear-gradient(0deg, rgba(251, 251, 251, 0.818), rgba(255, 255, 255, 0.852)),/* the gradient on top, adjust color and opacity to your taste */
+      url("../img/bg3.jpg");
+
+
+} 
+.portfolio-games{
+    /* background: white  url("../img/bg3.jpg");
+    background-blend-mode: white;
+    opacity: 50%; */
+    background: 
+     linear-gradient(0deg, rgba(251, 251, 251, 0.818), rgba(255, 255, 255, 0.852)),/* the gradient on top, adjust color and opacity to your taste */
+      url("../img/bg4.jpg");
+
+
+} 
 header.masthead .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
@@ -331,6 +375,8 @@ header.masthead .intro-text .intro-heading {
     font-size: 3em;
     margin-bottom: 15px;
 }
+
+
 .portfolio-modal .modal-content p {
     margin-bottom: 30px;
 }
@@ -701,8 +747,8 @@ fieldset[disabled] .btn-primary:hover {
     padding: 20px 40px;
     border-radius: 3px;
     color: white;
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #ff8743;
+    background-color: #ff8743;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }

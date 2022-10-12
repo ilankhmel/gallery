@@ -3,7 +3,7 @@ $(initPage)
 
 function initPage(){
     renderPortfolioItems()
-    renderModals()
+   // renderModal()
     setSendBtnFunc()
 }
 function renderPortfolioItems(){
@@ -11,7 +11,7 @@ function renderPortfolioItems(){
     
     var strHTML = items.map((item)=> 
             `<div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#${item.id}">
+            <a class="portfolio-link" onclick="renderModal('${item.id}')" data-toggle="modal" href="#${item.id}">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -31,10 +31,12 @@ function renderPortfolioItems(){
 }
 
 
-function renderModals(){
-    var items = getPortfolioItems()
-    
-    var strHTML = items.map((item)=> 
+function renderModal(itemId){
+    //var items = getPortfolioItems()
+    console.log(itemId);
+    var item = getItemById(itemId)
+    console.log(item);
+    var strHTML = 
     `<div class="portfolio-modal modal fade" id="${item.id}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -72,7 +74,7 @@ function renderModals(){
       </div>
     </div>
   </div>`
-)
+    console.log(strHTML);
     $('.modals').html(strHTML)
 }
 
