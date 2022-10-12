@@ -1,0 +1,38 @@
+body {
+    background-color: lightskyblue;
+}
+
+li button {
+    margin-left: 10px;
+    cursor: pointer;
+}
+li {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.todo-filter {
+    padding: 1em;
+    background-color: lightcoral;
+
+}
+
+.stat {
+    padding: 0.75em 1em;
+    background-color: lightcoral;
+    margin-bottom: 10px;
+}
+
+.filter button{
+    background-color: white;
+    color: grey;
+    border: 1px gray solid;
+    font-family:'Courier New', Courier, monospace
+  
+}
+.filter button:hover{
+    cursor: pointer;
+}

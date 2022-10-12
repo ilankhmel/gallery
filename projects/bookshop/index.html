@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onInit()">
+    <div class="title-container">
+        <img src="images/logo.png" alt="" class="logo">
+        <h1>Welcome to my Bookshop</h1>
+    </div>
+    
+    <section class="car-filter">
+
+        <label>
+            
+            <input placeholder="🔎 Search" size="71" type="text" class="search" value="" oninput="onSetFilterBy({txt: this.value})" ></input>
+
+        </label><br>
+        <div class="ranges">
+        <label>
+            Min Price:
+            <input type="range" min="0" max="100" value="0" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({minPrice: this.value})" />
+        </label>
+
+        <label>
+            Min Rate:
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+        </label>
+        </div>
+
+        <br>
+        <button class="change-mode" onclick="onChangePresentation()">Change Presentation Mode</button>
+        <hr />
+        <div class="add-book">
+            <button class="create-btn" onclick="onCreateBookBtnClick()">Add new book</button>
+        </div>
+        <div class="update-container"></div>
+        <hr>
+        <button onclick="onPreviousPage()">&lt;&lt;</button>
+        <div class="pages"></div>
+        <button onclick="onNextPage()">>></button>
+        <table>
+            
+            <tbody class="book-table">
+            </tbody>
+        </table>
+        <div class="cards-container"></div>
+        <div class="modal">
+            <button onclick="onCloseModal()">X</button>
+            <span class="read"></span><br>
+            <hr>
+            <button class="bookmark" onclick="onBookMarkBtnClick()">⭐Bookmark</button>
+        </div>
+        <hr>
+
+        <script src="js/services/util-service.js"></script>
+        <script src="js/services/storage-service.js"></script>
+        <script src="js/services/book-service.js"></script>
+        <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

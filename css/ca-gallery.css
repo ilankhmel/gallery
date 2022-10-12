@@ -190,7 +190,9 @@ body {
 header.masthead {
     text-align: center;
     color: white;
-    background-image: url("../img/header-bg.jpg");
+    background: rgba(0, 0, 0, 0.7)  url("../img/code.jpg");
+    /* background-image: url("../img/code.jpg"); */
+    background-blend-mode: darken;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
